@@ -1,4 +1,4 @@
-# mqtt-rule-engine
+# mqtt-rule-engine(施工中)
 开放原子大赛 - BifroMQ赛题二 - 基于规则引擎的消息分发系统
 
 此系统的核心目标是实现一个“实现中立”的物联网消息转发规则引擎。在架构设计上，系统需要与MQTT Broker保持松耦合的集成方式，充分利用MQTT协议本身的强大功能，实现与不同MQTT Broker之间的灵活对接。
