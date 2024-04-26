@@ -38,7 +38,7 @@ lts任务调度系统: https://github.com/ltsopensource/light-task-scheduler
 
 ### 规则引擎处理逻辑
 
-RuleEngineTask是规则引擎数据处理的核心类，前面主要负责设备数据如何经过LTB的处理交给不同的节点去处理，最后都是交给每个节点的RuleEngineTask来完成任务， 每个节点上的RuleEngineTask都一样。
+RuleEngineTask是规则引擎数据处理的核心类，前面主要负责设备数据如何经过LTS的处理交给不同的节点去处理，最后都是交给每个节点的RuleEngineTask来完成任务， 每个节点上的RuleEngineTask都一样。
 ![75675.png](https://github.com/kaori-seasons/mqtt-rule-engine/assets/20021404/23a9da25-e734-4d98-8c77-354d09f8fb74)
 
 
