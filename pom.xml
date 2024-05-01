@@ -10,6 +10,7 @@
     <modules>
         <module>iot-re-task</module>
         <module>iot-re-api</module>
+        <module>io-re-core</module>
     </modules>
     <packaging>pom</packaging>
     <url>https://github.com/ziapple/iot-re.git</url>
@@ -48,6 +49,7 @@
         <lts.version>1.7.0</lts.version>
         <quartz.version>2.2.2</quartz.version>
         <javassist.version>3.20.0-GA</javassist.version>
+        <mqtt.paho.version>1.2.0</mqtt.paho.version>
     </properties>
 
     <!--任务调度框架 -->
@@ -175,6 +177,11 @@
                 <groupId>org.mapdb</groupId>
                 <artifactId>mapdb</artifactId>
                 <version>${mapdb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>4.1.34.Final</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>

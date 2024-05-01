@@ -12,7 +12,6 @@ import com.bifromq.mqtt.task.TaskResponse;
  */
 public class TSDBFilterImpl implements TaskFilter {
  
-	@Override
 	public void doFilter(TaskRequest request, TaskResponse response, TaskFilterChain chain) {
 		response.responseStr = request.getRequestStr().replace("<", "[")
 				.replace(">", "]");
