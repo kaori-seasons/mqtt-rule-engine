@@ -33,7 +33,6 @@ public class IotRuleEngineJobRunnerImpl implements JobRunner {
      * params:{taskID:租户ID,mqttAddr:mqtt地址,ruleFilters:过滤器}
      * ruleFilters:
      */
-    @Override
     public Result run(JobContext jobContext) throws Throwable {
         try {
             BizLogger bizLogger = jobContext.getBizLogger();
