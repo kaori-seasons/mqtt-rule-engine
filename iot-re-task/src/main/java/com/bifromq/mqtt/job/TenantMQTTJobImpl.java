@@ -1,19 +1,22 @@
 package com.bifromq.mqtt.job;
 
-
 import com.bifromq.mqtt.core.RuleEngineJobDetail;
 import com.github.ltsopensource.core.domain.Action;
 import com.github.ltsopensource.tasktracker.Result;
 import com.github.ltsopensource.tasktracker.runner.JobContext;
 import com.github.ltsopensource.tasktracker.runner.JobRunner;
-
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 import java.util.Map;
 
-public class MQTTJobImpl implements JobRunner {
+/**
+ * 租户的MQTT拉取数据任务
+ * 给定MQTT的url，topic，username，password，任务会自动拉取数据，分派给@See TaskFilterChain来处理json数据
+ */
+public class TenantMQTTJobImpl implements JobRunner {
 
+    @Override
     public Result run(JobContext jobContext) throws Throwable {
         String tenantID = jobContext.getJob().getParam(RuleEngineJobDetail.TENANT_ID);
         String jobTask = jobContext.getJob().getParam(RuleEngineJobDetail.JOB_TASK);
@@ -68,4 +71,3 @@ public class MQTTJobImpl implements JobRunner {
         return new Result(Action.EXECUTE_SUCCESS, "任务执行完成！");
     }
 }
-
